@@ -3,30 +3,40 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [lista, setLista] = useState([{verbo: 'fall', simplePast: 'fell'}, {verbo: 'play', simplePast: 'played'}, {verbo: 'write', simplePast: 'wrote'}])
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <table style={{padding: "20px"}}>
+        <th style={{padding: "20px"}}>Verbo</th>
+        <th>Simple Past</th>
+        <tr>
+          <td>Run</td>
+          <td><input type="text" name="" id="" style={{border: "none", backgroundColor: '#002', textAlign: 'center'}}/></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="" id="" style={{border: "none", backgroundColor: '#002', textAlign: 'center'}}/></td>
+          <td>Ran</td>
+        </tr>
+        <tr>
+          <td><input type="text" name="" id="" style={{border: "none", backgroundColor: '#002', textAlign: 'center'}}/></td>
+          <td><input type="text" name="" id="" style={{border: "none", backgroundColor: '#002', textAlign: 'center'}}/></td>
+        </tr>
+        <tr>
+          <td>Run</td>
+          <td>Ran</td>
+        </tr>
+        <tr>
+          <td>Run</td>
+          <td>Ran</td>
+        </tr>
+        <tr>
+          <td>Run</td>
+          <td>Ran</td>
+        </tr>
+      </table>
+
+      <button style={{background: 'green'}}>Aleatorizar</button>
     </div>
   )
 }
